@@ -93,7 +93,7 @@ const App = () => {
     // const [query, setQuery] = useState('');
     
     useEffect(()=>{
-        axios.get('http://localhost:8998/api/v1/novels')
+        axios.get('https://asian-novels-app-be.herokuapp.com/api/v1/novels')
         .then(response=>{
             dispatch({type: 'FETCH_SUCCESS', payload: response.data})
         })

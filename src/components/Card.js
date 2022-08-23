@@ -15,7 +15,7 @@ const Card = ({novel, dispatch, privilege}) => {
     }
 
     const deleteFunction = () => {
-        axios.delete(`http://localhost:8998/api/v1/novels/${novel._id}`)
+        axios.delete(`https://asian-novels-app-be.herokuapp.com/api/v1/novels/${novel._id}`)
         .then(response=>{
             dispatch({type: 'DELETE_NOVEL', payload: {_id: novel._id}});
             alert(`${novel.title} has been deleted!`);

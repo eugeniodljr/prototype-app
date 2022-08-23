@@ -22,7 +22,7 @@ const UpdateNovelForm = ({novel, dispatch}) => {
 
     const updateNovelFunction = e => {
         e.preventDefault();
-        axios.put(`http://localhost:8998/api/v1/novels/${novel._id}`, {title, description, chapters, language, author, year, status_in_coo, completely_translated, readers, image, more_info, read_online})
+        axios.put(`https://asian-novels-app-be.herokuapp.com/api/v1/novels/${novel._id}`, {title, description, chapters, language, author, year, status_in_coo, completely_translated, readers, image, more_info, read_online})
         .then(response=>{
             dispatch({type: 'UPDATE_NOVEL', payload: {_id: novel._id, title, description, chapters, language, author, year, status_in_coo, completely_translated, readers, image, more_info, read_online}});
             alert(`${title} has been updated!`);
