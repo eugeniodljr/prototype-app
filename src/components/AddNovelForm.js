@@ -23,7 +23,7 @@ const AddNovelForm = ({state, dispatch}) => {
     const addNovelFunction = e => {
         e.preventDefault();
         alert(`${title} has been added!`);
-        axios.post('https://asian-novels-app-be.herokuapp.com/api/v1/novels', {title, description, chapters, language, author, year, status_in_coo, completely_translated, readers, image, more_info, read_online})
+        axios.post('https://asian-novels-be.herokuapp.com/api/v1/novels', {title, description, chapters, language, author, year, status_in_coo, completely_translated, readers, image, more_info, read_online})
             .then(response=>{
                 dispatch({type:'ADD_NOVEL', payload: {...response.data}})
             })

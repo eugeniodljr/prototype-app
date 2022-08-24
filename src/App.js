@@ -91,9 +91,9 @@ const App = () => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
     // const [query, setQuery] = useState('');
-    
+    // https://asian-novels-be.herokuapp.com/
     useEffect(()=>{
-        axios.get('https://asian-novels-app-be.herokuapp.com/api/v1/novels')
+        axios.get('https://asian-novels-be.herokuapp.com/api/v1/novels')
         .then(response=>{
             dispatch({type: 'FETCH_SUCCESS', payload: response.data})
         })
