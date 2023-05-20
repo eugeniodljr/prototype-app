@@ -92,12 +92,9 @@ const App = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     // const [query, setQuery] = useState('');
     // https://asian-novels-be.herokuapp.com/
-    // https://prototype-app-be.vercel.app/
     useEffect(()=>{
-        // axios.get('https://asian-novels-be.herokuapp.com/api/v1/novels')
-        axios.get('https://prototype-app-be.vercel.app/api/v1/novels')
+        axios.get('https://asian-novels-be.herokuapp.com/api/v1/novels')
         .then(response=>{
-        // .then(response=>{
             dispatch({type: 'FETCH_SUCCESS', payload: response.data})
         })
         .catch(error=>{
